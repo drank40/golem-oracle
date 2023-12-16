@@ -1,19 +1,12 @@
-## Foundry
+On-chain code to implement an LLM oracle prompted with https://github.com/guidance-ai/guidance
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This is used to bring LLM (Llama, GPT-4, Bing ...) prompts on Ethereum, by specifying a consistent and public format
+with which the prompts will be answered using Guidance, making it possible to plug these prompts into a Smart Contract
+in an automated and trustless manner.
 
-Foundry consists of:
+**NOTE** : the backend code managing prompt conditioning and event filtering is not public yet, contact me if you're interested
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
+To build this project you will need the **Foundry** framework, refer to https://book.getfoundry.sh/
 
 ### Build
 
@@ -25,42 +18,4 @@ $ forge build
 
 ```shell
 $ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
 ```
